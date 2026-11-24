@@ -1,0 +1,12 @@
+{
+  "dataset_version": "phase5-synthetic-v1",
+  "name": "Phase 5 synthetic evaluation dataset",
+  "description": "Manually authored synthetic documents and ground truth for real end-to-end evaluation.",
+  "license": "CC0-1.0 for all synthetic assets in this dataset",
+  "sample_count": 11,
+  "small_subset_count": 4,
+  "ground_truth_directory": "ground_truth",
+  "samples_directory": "samples",
+  "generator": "evaluation/generate_samples.py",
+  "ground_truth_method": "Manually authored from the synthetic source artwork; not generated or verified by Gemini."
+}

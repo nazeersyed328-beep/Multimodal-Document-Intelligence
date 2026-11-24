@@ -1,0 +1,31 @@
+# Multimodal Document Intelligence dependencies
+#
+# Verified on Python 3.14.10 (Windows, 64-bit) with the following resolved
+# versions: pydantic 2.14.3, streamlit 1.67.0, python-dotenv 1.2.4,
+# Pillow 12.3.0, PyMuPDF 1.28.2, google-genai 2.34.0, pytest 9.2.0.
+#
+# Version ranges are deliberately capped at the next major release to avoid
+# breaking API changes. PDF handling uses the `pymupdf` import name provided by
+# PyMuPDF 1.25+. Gemini integration uses the supported `google-genai` SDK and
+# the `google.genai.Client().interactions.create` API.
+
+# Web UI shell (pulls in its own transitive dependencies).
+streamlit>=1.50,<2
+
+# Strict, typed data validation using the Pydantic v2 API.
+pydantic>=2.10,<3
+
+# Loads environment variables from a local .env file into os.environ.
+python-dotenv>=1.0,<2
+
+# Image format metadata and safe image inspection utilities.
+Pillow>=11.0,<13
+
+# PDF metadata and safe PDF inspection utilities.
+PyMuPDF>=1.25,<2
+
+# Gemini API client used only when an API key is configured.
+google-genai>=2.0.0,<3.0.0
+
+# Unit testing framework (no network or external services required by default).
+pytest>=8.3,<10
